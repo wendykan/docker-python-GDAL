@@ -17,6 +17,7 @@ RUN apt-get -qqy update && \
         idle \
         python-pmw \
         python-imaging \
+        python-opencv \
         python-matplotlib \
         git-all \
         --no-install-recommends
@@ -38,7 +39,7 @@ RUN pip install geojson && \
     pip install ipython && \
     pip install jupyter && \
     pip install pandas && \
-    pip install tifffile
+    pip install tifffile 
 
 # Clean-up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
