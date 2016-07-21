@@ -39,7 +39,8 @@ RUN pip install geojson && \
     pip install ipython && \
     pip install jupyter && \
     pip install pandas && \
-    pip install tifffile 
+    pip install tifffile && \
+    pip install awscli --ignore-installed six
 
 # Clean-up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
